@@ -1,4 +1,11 @@
 return {
+  -- Lazy Events
+  -- "User AstroFile" - Trigered after opening a file
+  -- "VeryLazy" - Triggered after starting Neovim
+  -- "BufEnter *.lua" - Triggered after opening a Lua file
+  -- "Insert Enter" - Triggered after entering insert mode
+  -- "LspAttach" - Triggered after starting LSPs
+  --
   -- You can also add new plugins here as well:
   -- Add plugins, the lazy syntax
   -- "andweeb/presence.nvim",
@@ -9,4 +16,13 @@ return {
   --     require("lsp_signature").setup()
   --   end,
   -- },
+  {
+    "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    config = function() require("todo-comments").setup {} end,
+    -- opts = {},
+    event = "User AstroFile", -- Override Lazy Loading
+    cmd = { "TodoQuickFix" },
+    keys = {},
+  },
 }

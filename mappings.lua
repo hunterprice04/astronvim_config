@@ -5,7 +5,7 @@
 -- automatically pick-up stored data by this setting.)
 return {
   -- first key is the mode
-  n = {
+  n = { -- Mappings for normal mode
     -- second key is the lefthand side of the map
     -- mappings seen under group name "Buffer"
     ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
@@ -20,9 +20,15 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    --
   },
-  t = {
+  t = { -- Mappings for terminal mode
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,
   },
+  v = { -- Mappings for visual mode
+  },
+  i = { -- Mappings for insert mode
+
+  }
 }
