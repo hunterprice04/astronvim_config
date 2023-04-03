@@ -9,6 +9,7 @@ return {
   { import = "astrocommunity.colorscheme.oxocarbon" },
 
   -- Language Support
+  { import = "astrocommunity.pack.astro" },
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.tailwindcss" },
   { import = "astrocommunity.pack.python" },
@@ -20,6 +21,9 @@ return {
 
   -- Markdown
   { import = "astrocommunity.markdown-and-latex.glow-nvim" },
+
+  -- Media
+  { import = "astrocommunity.media.presence-nvim" },
 
   -- Completion
   { import = "astrocommunity.completion.copilot-lua-cmp" },

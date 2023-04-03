@@ -20,7 +20,24 @@ return {
     "jay-babu/mason-nvim-dap.nvim",
     -- overrides `require("mason-nvim-dap").setup(...)`
     opts = {
-      ensure_installed = { "python" },
+      ensure_installed = { "python", "python3" },
+      automatic_installation = true,
+      automatic_setup = {
+        adapters = {
+          python = {
+            type = "executable",
+            command = "/usr/bin/python3",
+            args = {
+              "-m",
+              "debugpy.adapter",
+            },
+          },
+        },
+        -- configurations = {
+
+        -- }
+      },
+      -- automatic_setup = true,
     },
   },
 }
